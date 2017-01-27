@@ -33,42 +33,131 @@ document.querySelector('.turns-display').innerHTML = "You've got " + numTurns + 
 
 
 document.querySelector('.letter-buttons').addEventListener('click', checkLetter);
+document.querySelector('.letter-buttons').addEventListener('click', updateTurns);
 
-// function compareLetter(){
-//   if (randoArray.includes(btn.textContent)){
-//     console.log("Good guess!");
-//   }
-// };
+
+// To display how many turns you've got left!
+function updateTurns(e){
+  if (e.target !== e.currentTarget) {
+    numTurns = numTurns -1;
+    document.querySelector('.turns-display').innerHTML = "You've got " + numTurns + " guesses left!";
+    if (numTurns === 0) {
+      alert("you lose! Try again!");
+      // Maybe try to factor in a modal failure display
+    }
+  }
+};
+
 function updateDisplay(displayDashes){
   document.querySelector('.word-display').innerHTML = displayDashes.join(" ");
-}
+};
+
+// This almost works - but only displays one letter, even if there are multiples
 
 function checkLetter(e) {
     if (e.target !== e.currentTarget) {
+// use something besides includes - maybe a map and a filter -array of indexes where letter is
         if (randoArray.includes(e.target.textContent)) {
           // randoArray.indexOf(e.target.textContent) = displayDashes.replace("__", e.target.textContent);
-
-          console.log(e.target.textContent);
-          console.log(randoArray);
-          console.log(randoArray.indexOf(e.target.textContent));
-          console.log(displayDashes);
+          // console.log(e.target.textContent);
+          // console.log(randoArray);
+          // console.log(randoArray.indexOf(e.target.textContent));
+          // console.log(displayDashes);
 
           console.log(displayDashes.splice((randoArray.indexOf(e.target.textContent)), 1, e.target.textContent));
 
           updateDisplay(displayDashes);
-          // console.log(randoArray.indexOf(e.target.textContent));
-          // console.log("you got it");
+          // updateTurns();
+          console.log(numTurns);
 
         }
 
     }
     e.stopPropagation();
+      if (displayDashes.includes("__") == false) {
+          alert("you win!"), 100000;
+      }
+
 }
 
 
-// function hey(){
-//   console.log("hey!");
+console.log(numTurns);
+
+
+
+// function checkLetter(e) {
+//     if (e.target !== e.currentTarget) {
+// // use something besides includes - maybe a map and a filter -array of indexes where letter is
+//       var newArray = randoArray.map(function(e){
+//         return randoArray.(e.target.textContent);
+//         console.log(newArray);
+//           // randoArray.indexOf(e.target.textContent) = displayDashes.replace("__", e.target.textContent);
+//           // console.log(e.target.textContent);
+//           // console.log(randoArray);
+//           // console.log(randoArray.indexOf(e.target.textContent));
+//           // console.log(displayDashes);
+//
+//           console.log(displayDashes.splice((randoArray.indexOf(e.target.textContent)), 1, e.target.textContent));
+//
+//           updateDisplay(displayDashes);
+//         });
+
+
+        //
+        //
+        // if (randoArray.includes(e.target.textContent)) {
+        //   // randoArray.indexOf(e.target.textContent) = displayDashes.replace("__", e.target.textContent);
+        //   // console.log(e.target.textContent);
+        //   // console.log(randoArray);
+        //   // console.log(randoArray.indexOf(e.target.textContent));
+        //   // console.log(displayDashes);
+        //
+        //   console.log(displayDashes.splice((randoArray.indexOf(e.target.textContent)), 1, e.target.textContent));
+        //
+        //   updateDisplay(displayDashes);
+        // }
+//
+//     }
+//     e.stopPropagation();
 // }
+
+
+
+
+
+
+// Listener to change color when letter has been guessed already
+document.querySelector('.letter-buttons').addEventListener('click', changeColor);
+
+// changing used button's color
+function changeColor(e){
+    if(e.target !== e.currentTarget){
+        e.target.style.backgroundColor = "red";
+
+    }
+
+}
+
+
+
+
+
+
+
+
+// if (randoArray.includes(e.target.textContent)) {
+//   // randoArray.indexOf(e.target.textContent) = displayDashes.replace("__", e.target.textContent);
+//   // console.log(e.target.textContent);
+//   // console.log(randoArray);
+//   // console.log(randoArray.indexOf(e.target.textContent));
+//   // console.log(displayDashes);
+//
+//   console.log(displayDashes.splice((randoArray.indexOf(e.target.textContent)), 1, e.target.textContent));
+//
+//   updateDisplay(displayDashes);
+// }
+
+
 
 
 // var letterGuessed = document.querySelector('.btn').textContent;
