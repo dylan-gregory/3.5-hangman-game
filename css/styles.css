@@ -5809,4 +5809,8 @@ button.close {
 body {
   background-color: green; }
 
+header {
+  background-color: grey;
+  font-size: 20px; }
+
 /*# sourceMappingURL=styles.css.map */

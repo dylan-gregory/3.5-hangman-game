@@ -15,6 +15,16 @@ var randoArray = randoWord.split("");
 
 console.log(randoArray);
 
+// This transforms the array items into the dashes to be displayed
+var displayDashes = randoArray.map(function(indexItem){
+  return indexItem = "__";
+});
+
+// This displays the dashes and removes the commas in between them
+document.querySelector('.word-display').innerHTML = displayDashes.join(" ");
+
+
+
 
 
 
