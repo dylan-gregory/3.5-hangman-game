@@ -5813,4 +5813,14 @@ header {
   background-color: grey;
   font-size: 20px; }
 
+.btn {
+  background-color: cyan;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.guess-display {
+  background-color: #021E44;
+  font-size: 40px;
+  text-align: center; }
+
 /*# sourceMappingURL=styles.css.map */

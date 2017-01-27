@@ -1,8 +1,12 @@
 
+$prussian-blue: #021E44;
+$nice-red: #FFB800;
+
 
 
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
+// Let's use the Bob Ross colors!!!!
 
 body{
   background-color: green;
@@ -11,4 +15,18 @@ body{
 header{
   background-color: grey;
   font-size: 20px;
+}
+
+.btn{
+  background-color: cyan;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+
+.guess-display{
+  background-color: $prussian-blue;
+  font-size: 40px;
+  text-align: center;
+
 }
