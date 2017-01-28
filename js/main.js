@@ -49,14 +49,18 @@ function updateTurns(e){
 };
 
 function updateDisplay(displayDashes){
+  // foundIndex.forEach()
   document.querySelector('.word-display').innerHTML = displayDashes.join(" ");
 };
 
-// This almost works - but only displays one letter, even if there are multiples
 
+// This almost works - but only displays one letter, even if there are multiples
+//
 function checkLetter(e) {
     if (e.target !== e.currentTarget) {
 // use something besides includes - maybe a map and a filter -array of indexes where letter is
+
+
         if (randoArray.includes(e.target.textContent)) {
           // randoArray.indexOf(e.target.textContent) = displayDashes.replace("__", e.target.textContent);
           // console.log(e.target.textContent);
@@ -83,41 +87,72 @@ function checkLetter(e) {
 
 console.log(numTurns);
 
-
-
-// function checkLetter(e) {
-//     if (e.target !== e.currentTarget) {
-// // use something besides includes - maybe a map and a filter -array of indexes where letter is
-//       var newArray = randoArray.map(function(e){
-//         return randoArray.(e.target.textContent);
-//         console.log(newArray);
-//           // randoArray.indexOf(e.target.textContent) = displayDashes.replace("__", e.target.textContent);
-//           // console.log(e.target.textContent);
-//           // console.log(randoArray);
-//           // console.log(randoArray.indexOf(e.target.textContent));
-//           // console.log(displayDashes);
+// var foundIndex = [];
 //
+// randoArray.forEach(function(letter, index)){
+//   if (letter == guess){
+//     foundIndex.push(index);
+//   }
+// }
+
+
+//
+// updateDisplay(indexes){
+//   indexes.forEach(function(letterIndex)){
+//     select the span tag its in + letterIndex = randoArray[letterIndex];
+//   }
+// }
+
+// Form to refactor the main function
+// randomWord.forEach(function(letter, index){
+//   if (letter === guess){
+//   foundIndex.push[index];
+// }
+// });
+//
+// if (!foundIndex.length) {decriment guesses and}
+//
+// update the word thing
+//
+// }
+
+
+
+//
+// function checkLetter(e) {
+//     var foundIndex = [];
+//     if (e.target !== e.currentTarget) {
+//           // use something besides includes - maybe a map and a filter -array of indexes where letter is
+//           randoArray.forEach(function(letter, index){
+//             if (letter == e.target.textContent){
+//               foundIndex.push(index);
+//             }
+//           });
 //           console.log(displayDashes.splice((randoArray.indexOf(e.target.textContent)), 1, e.target.textContent));
 //
 //           updateDisplay(displayDashes);
-//         });
-
-
-        //
-        //
-        // if (randoArray.includes(e.target.textContent)) {
-        //   // randoArray.indexOf(e.target.textContent) = displayDashes.replace("__", e.target.textContent);
-        //   // console.log(e.target.textContent);
-        //   // console.log(randoArray);
-        //   // console.log(randoArray.indexOf(e.target.textContent));
-        //   // console.log(displayDashes);
-        //
-        //   console.log(displayDashes.splice((randoArray.indexOf(e.target.textContent)), 1, e.target.textContent));
-        //
-        //   updateDisplay(displayDashes);
-        // }
+//           console.log(foundIndex);
+//         };
 //
-//     }
+//
+//         //
+//         // function updateDisplay(foundIndex){
+//         //   foundIndex.forEach(function(foundIndex){
+//         //      displayDashes = randoArray[letterIndex]
+//         //   });
+//         // if (randoArray.includes(e.target.textContent)) {
+//         //   // randoArray.indexOf(e.target.textContent) = displayDashes.replace("__", e.target.textContent);
+//         //   // console.log(e.target.textContent);
+//         //   // console.log(randoArray);
+//         //   // console.log(randoArray.indexOf(e.target.textContent));
+//         //   // console.log(displayDashes);
+//         //
+//         //   console.log(displayDashes.splice((randoArray.indexOf(e.target.textContent)), 1, e.target.textContent));
+//         //
+//         //   updateDisplay(displayDashes);
+//         // }
+//
+//
 //     e.stopPropagation();
 // }
 
