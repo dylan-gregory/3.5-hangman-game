@@ -167,7 +167,7 @@ document.querySelector('.letter-buttons').addEventListener('click', changeColor)
 // changing used button's color
 function changeColor(e){
     if(e.target !== e.currentTarget){
-        e.target.style.backgroundColor = "red";
+        e.target.style.backgroundColor = "#DB0000";
 
     }
 

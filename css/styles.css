@@ -5807,20 +5807,46 @@ button.close {
   .hidden-print {
     display: none !important; } }
 body {
-  background-color: green; }
+  background-color: #FFB800;
+  font-family: "Helvetica", sans-serif; }
 
 header {
-  background-color: grey;
-  font-size: 20px; }
+  text-align: center;
+  color: #FFB800;
+  background-color: #0A3410;
+  border: 4px solid #C79B00;
+  border-radius: 15px;
+  font-size: 60px; }
 
 .btn {
-  background-color: cyan;
+  background-color: #C79B00;
   margin-top: 5px;
   margin-bottom: 5px; }
 
+.btn:hover {
+  background-color: #0C0040;
+  color: white; }
+
+.letter-buttons {
+  border: 4px solid #C79B00;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding-top: 10px; }
+
 .guess-display {
+  color: #C79B00;
   background-color: #021E44;
+  border: 4px solid #C79B00;
+  border-radius: 15px;
+  margin-top: 20px;
   font-size: 40px;
   text-align: center; }
+
+.hangman-pic {
+  background-color: white;
+  text-align: center;
+  border: 4px solid #C79B00;
+  border-radius: 15px;
+  font-size: 60px; }
 
 /*# sourceMappingURL=styles.css.map */
