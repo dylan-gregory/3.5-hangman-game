@@ -4,14 +4,24 @@
 // I want the game to automagically choose a random word upon initial page load, so this is an iife
 var randoWord;
 
+// This filters out words less than 3 characters long
+var bigWords = commonWords.filter(function(word) {
+  return word.length >=3;
+});
+
+
 (function(){
-  randoWord = commonWords[Math.floor(Math.random() * commonWords.length)];
+  randoWord = bigWords[Math.floor(Math.random() * bigWords.length)];
 
 }());
+
 console.log(randoWord);
+
 
 //This splits the random word into an array of it's individual characters
 var randoArray = randoWord.split("");
+
+
 
 console.log(randoArray);
 
@@ -42,8 +52,12 @@ function updateTurns(e){
     numTurns = numTurns -1;
     document.querySelector('.turns-display').innerHTML = "You've got " + numTurns + " guesses left!";
     if (numTurns === 0) {
-      alert("you lose! Try again!");
+      // alert("you lose! Try again!");
       // Maybe try to factor in a modal failure display
+
+
+          document.getElementById('#myModal').modal('show');
+
     }
   }
 };
@@ -55,7 +69,7 @@ function updateDisplay(displayDashes){
 
 
 // This almost works - but only displays one letter, even if there are multiples
-//
+
 function checkLetter(e) {
     if (e.target !== e.currentTarget) {
 // use something besides includes - maybe a map and a filter -array of indexes where letter is
@@ -73,7 +87,6 @@ function checkLetter(e) {
           displayDashes.splice((randoArray.indexOf(e.target.textContent)), 1, e.target.textContent);
 
           updateDisplay(displayDashes);
-          // updateTurns();
 
         }
       }
@@ -82,12 +95,44 @@ function checkLetter(e) {
     e.stopPropagation();
       if (displayDashes.includes("__") == false) {
           alert("you win!"), 100000;
+
       }
 
 }
 
 
 console.log(numTurns);
+
+
+
+//
+// randoArray.forEach(function checkLetter(e) {
+//     if (e.target !== e.currentTarget) {
+//
+//         if (randoArray.includes(e.target.textContent)) {
+//             correctIndexes.push(e);
+//             updateDisplay(displayDashes);
+//
+//         }
+//
+//         e.stopPropagation();
+//           if (displayDashes.includes("__") == false) {
+//               alert("you win!"), 100000;
+//           }
+//
+//     }
+//
+//
+//   })
+
+
+// function checkLetter(e) {
+//     if (e.target !== e.currentTarget) {
+//
+//     }
+//
+//
+//   }
 
 // var foundIndex = [];
 //
@@ -169,7 +214,7 @@ document.querySelector('.letter-buttons').addEventListener('click', changeColor)
 // changing used button's color
 function changeColor(e){
     if(e.target !== e.currentTarget){
-        e.target.style.backgroundColor = "grey";
+        e.target.style.backgroundColor = "#4E1500";
 
     }
 
