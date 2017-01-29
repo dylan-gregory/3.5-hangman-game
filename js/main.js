@@ -56,19 +56,21 @@ function updateTurns(e){
       // Maybe try to factor in a modal failure display
 
 
-          document.getElementById('#myModal').modal('show');
-
     }
   }
 };
 
 function updateDisplay(displayDashes){
-  // foundIndex.forEach()
+  // foundIndex.forEach(function(letterIndex)){
+ //     select the span tag its in + letterIndex = randoArray[letterIndex];
   document.querySelector('.word-display').innerHTML = displayDashes.join(" ");
 };
 
 
 // This almost works - but only displays one letter, even if there are multiples
+
+
+var foundIndex = [];
 
 function checkLetter(e) {
     if (e.target !== e.currentTarget) {
@@ -76,19 +78,29 @@ function checkLetter(e) {
 
       for (var i = 0; i < randoArray.length; i++) {
 
+        var foundIndex = [];
+
+        randoArray.forEach(function(letter, index){
+          if (letter == e.target.textContent){
+            foundIndex.push(index);
 
 
-        if (randoArray.includes(e.target.textContent)) {
+          console.log(foundIndex);
+
+
+        // if (randoArray.includes(e.target.textContent)) {
           // randoArray.indexOf(e.target.textContent) = displayDashes.replace("__", e.target.textContent);
           // console.log(e.target.textContent);
           // console.log(randoArray);
           // console.log(randoArray.indexOf(e.target.textContent));
           // console.log(displayDashes);
-          displayDashes.splice((randoArray.indexOf(e.target.textContent)), 1, e.target.textContent);
-
+          foundIndex.forEach(function(indexes){
+          displayDashes.splice(indexes, 1, e.target.textContent);
+        });
           updateDisplay(displayDashes);
-
         }
+
+        })
       }
 
     }
@@ -102,6 +114,8 @@ function checkLetter(e) {
 
 
 console.log(numTurns);
+
+
 
 
 
@@ -137,7 +151,7 @@ console.log(numTurns);
 // var foundIndex = [];
 //
 // randoArray.forEach(function(letter, index)){
-//   if (letter == guess){
+//   if (letter == e.target.textContent){
 //     foundIndex.push(index);
 //   }
 // }
