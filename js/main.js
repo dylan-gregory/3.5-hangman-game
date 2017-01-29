@@ -51,10 +51,11 @@ function updateTurns(e){
   if (e.target !== e.currentTarget) {
     numTurns = numTurns -1;
     document.querySelector('.turns-display').innerHTML = "You've got " + numTurns + " guesses left!";
-    if (numTurns === 0) {
-      // alert("you lose! Try again!");
+    if ((numTurns === 0) && (displayDashes.includes("__") == true)) {
+      alert("You lose! Try again!");
       // Maybe try to factor in a modal failure display
-
+      document.querySelector('.play-again').style.display = 'inline';
+      document.querySelector('.pick').style.display = 'none';
 
     }
   }
@@ -106,7 +107,9 @@ function checkLetter(e) {
     }
     e.stopPropagation();
       if (displayDashes.includes("__") == false) {
-          alert("you win!"), 100000;
+          alert("Huzzah - you are a master of words!"), 100000;
+          document.querySelector('.play-again').style.display = 'inline';
+          document.querySelector('.pick').style.display = 'none';
 
       }
 

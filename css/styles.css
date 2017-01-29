@@ -5812,8 +5812,8 @@ body {
 
 header {
   text-align: center;
-  color: #FFB800;
-  background-color: #0A3410;
+  color: white;
+  background-color: #102E3C;
   border: 4px solid #C79B00;
   border-radius: 15px;
   font-size: 50px;
@@ -5825,18 +5825,19 @@ header {
   margin-bottom: 5px; }
 
 .btn:hover {
-  background-color: #0C0040;
+  background-color: #102E3C;
   color: white; }
 
 .select {
   border: 4px solid #C79B00;
   border-radius: 15px;
   margin-top: 10px;
-  padding-top: 10px; }
+  padding-top: 10px;
+  padding-bottom: 20px; }
 
 .guess-display {
-  color: #C79B00;
-  background-color: #021E44;
+  color: white;
+  background-color: #102E3C;
   border: 4px solid #C79B00;
   border-radius: 15px;
   margin-top: 10px;
@@ -5845,7 +5846,8 @@ header {
   padding-bottom: 38px; }
 
 .pick {
-  text-align: center; }
+  text-align: center;
+  font-size: 25px; }
 
 .hangman-pic {
   background-color: white;
@@ -5854,5 +5856,9 @@ header {
   border-radius: 15px;
   font-size: 60px;
   margin-top: 10px; }
+
+.play-again {
+  display: none;
+  font-size: 20px; }
 
 /*# sourceMappingURL=styles.css.map */

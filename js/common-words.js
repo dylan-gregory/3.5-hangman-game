@@ -1,5 +1,6 @@
 // Here are the 100 most popular words in English, as totally
 // stolen from here: https://gist.github.com/gravitymonkey/2406023
+// I adeed a few more difficult words...just because.
 var commonWords = [
   "the","of","and","a","to","in","is","you","that","it","he",
   "was","for","on","are","as","with","his","they","I","at","be",
@@ -11,7 +12,8 @@ var commonWords = [
   "look","two","more","write","go","see","number","no","way",
   "could","people","my","than","first","water","been","call",
   "who","oil","its","now","find","long","down","day","did","get",
-  "come","made","may","part"
+  "come","made","may","part", "dodecahedron", "rectangle", "xylophone", "cardinal",
+  "nomenclature", "america", "skateboard"
 ];
 
 
