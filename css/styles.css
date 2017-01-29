@@ -5816,7 +5816,8 @@ header {
   background-color: #0A3410;
   border: 4px solid #C79B00;
   border-radius: 15px;
-  font-size: 60px; }
+  font-size: 50px;
+  margin-top: 10px; }
 
 .btn {
   background-color: #C79B00;
@@ -5827,10 +5828,10 @@ header {
   background-color: #0C0040;
   color: white; }
 
-.letter-buttons {
+.select {
   border: 4px solid #C79B00;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding-top: 10px; }
 
 .guess-display {
@@ -5838,8 +5839,12 @@ header {
   background-color: #021E44;
   border: 4px solid #C79B00;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 40px;
+  text-align: center;
+  padding-bottom: 38px; }
+
+.pick {
   text-align: center; }
 
 .hangman-pic {
@@ -5847,6 +5852,7 @@ header {
   text-align: center;
   border: 4px solid #C79B00;
   border-radius: 15px;
-  font-size: 60px; }
+  font-size: 60px;
+  margin-top: 10px; }
 
 /*# sourceMappingURL=styles.css.map */

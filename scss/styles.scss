@@ -28,7 +28,8 @@ header{
   background-color: $sap-green;
   border: 4px solid $yellow-ochre;
   border-radius: 15px;
-  font-size: 60px;
+  font-size: 50px;
+  margin-top: 10px;
 }
 
 .btn{
@@ -43,10 +44,10 @@ header{
   color: white;
 }
 
-.letter-buttons{
+.select{
   border: 4px solid $yellow-ochre;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding-top: 10px;
 }
 
@@ -55,13 +56,17 @@ header{
   background-color: $prussian-blue;
   border: 4px solid $yellow-ochre;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 40px;
   text-align: center;
+  padding-bottom: 38px;
 }
 
 
+.pick{
+  text-align: center;
 
+}
 //This is temporary until I get a field to add the animation to
 .hangman-pic{
   background-color: white;
@@ -70,4 +75,5 @@ header{
   border-radius: 15px;
   // height: 300px;
   font-size: 60px;
+  margin-top: 10px;
 }

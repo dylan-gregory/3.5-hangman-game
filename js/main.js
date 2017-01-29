@@ -60,6 +60,9 @@ function checkLetter(e) {
     if (e.target !== e.currentTarget) {
 // use something besides includes - maybe a map and a filter -array of indexes where letter is
 
+      for (var i = 0; i < randoArray.length; i++) {
+
+
 
         if (randoArray.includes(e.target.textContent)) {
           // randoArray.indexOf(e.target.textContent) = displayDashes.replace("__", e.target.textContent);
@@ -67,14 +70,13 @@ function checkLetter(e) {
           // console.log(randoArray);
           // console.log(randoArray.indexOf(e.target.textContent));
           // console.log(displayDashes);
-
-          console.log(displayDashes.splice((randoArray.indexOf(e.target.textContent)), 1, e.target.textContent));
+          displayDashes.splice((randoArray.indexOf(e.target.textContent)), 1, e.target.textContent);
 
           updateDisplay(displayDashes);
           // updateTurns();
-          console.log(numTurns);
 
         }
+      }
 
     }
     e.stopPropagation();
@@ -167,7 +169,7 @@ document.querySelector('.letter-buttons').addEventListener('click', changeColor)
 // changing used button's color
 function changeColor(e){
     if(e.target !== e.currentTarget){
-        e.target.style.backgroundColor = "#DB0000";
+        e.target.style.backgroundColor = "grey";
 
     }
 
@@ -218,34 +220,69 @@ function changeColor(e){
 //   decrimentTurns
 
 
-
-
-// var letterA = document.querySelector('.btnA').textContent;
-// var letterB = document.querySelector('.btnB').textContent;
-// var letterC = document.querySelector('.btnC').textContent;
-// var letterD = document.querySelector('.btnD').textContent;
-// var letterE = document.querySelector('.btnE').textContent;
-// var letterF = document.querySelector('.btnF').textContent;
-// var letterG = document.querySelector('.btnG').textContent;
-// var letterH = document.querySelector('.btnH').textContent;
-// var letterI = document.querySelector('.btnI').textContent;
-// var letterJ = document.querySelector('.btnJ').textContent;
-// var letterK = document.querySelector('.btnK').textContent;
-// var letterL = document.querySelector('.btnL').textContent;
-// var letterM = document.querySelector('.btnM').textContent;
-// var letterN = document.querySelector('.btnN').textContent;
-// var letterO = document.querySelector('.btnO').textContent;
-// var letterP = document.querySelector('.btnP').textContent;
-// var letterQ = document.querySelector('.btnQ').textContent;
-// var letterR = document.querySelector('.btnR').textContent;
-// var letterS = document.querySelector('.btnS').textContent;
-// var letterT = document.querySelector('.btnT').textContent;
-// var letterU = document.querySelector('.btnU').textContent;
-// var letterV = document.querySelector('.btnV').textContent;
-// var letterW = document.querySelector('.btnW').textContent;
-// var letterX = document.querySelector('.btnX').textContent;
-// var letterY = document.querySelector('.btnY').textContent;
-// var letterZ = document.querySelector('.btnZ').textContent;
+// Not sure how well this is going to work, but we shall see
+// Hangman
+// var canvas =  function(){
+//
+//  var myStickman = document.getElementById("hangman-pic");
+//  var context = myStickman.getContext('2d');
+//  context.beginPath();
+//  context.strokeStyle = "#fff";
+//  context.lineWidth = 2;
+// };
+//
+//  var head = function(){
+//    myStickman = document.getElementById("hangman-pic");
+//    context = myStickman.getContext('2d');
+//    context.beginPath();
+//    context.arc(60, 25, 10, 0, Math.PI*2, true);
+//    context.stroke();
+//  }
+//
+// var draw = function($pathFromx, $pathFromy, $pathTox, $pathToy) {
+//
+//  context.moveTo($pathFromx, $pathFromy);
+//  context.lineTo($pathTox, $pathToy);
+//  context.stroke();
+// }
+//
+// var frame1 = function() {
+//   draw (0, 150, 150, 150);
+// };
+//
+// var frame2 = function() {
+//   draw (10, 0, 10, 600);
+// };
+//
+// var frame3 = function() {
+//   draw (0, 5, 70, 5);
+// };
+//
+// var frame4 = function() {
+//   draw (60, 5, 60, 15);
+// };
+//
+// var torso = function() {
+//   draw (60, 36, 60, 70);
+// };
+//
+// var rightArm = function() {
+//   draw (60, 46, 100, 50);
+// };
+//
+// var leftArm = function() {
+//   draw (60, 46, 20, 50);
+// };
+//
+// var rightLeg = function() {
+//   draw (60, 70, 100, 100);
+// };
+//
+// var leftLeg = function() {
+//   draw (60, 70, 20, 100);
+// };
+//
+// var drawArray = [rightLeg, leftLeg, rightArm, leftArm,  torso,  head, frame4, frame3, frame2, frame1];
 
 
 
