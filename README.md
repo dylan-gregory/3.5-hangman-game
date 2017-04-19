@@ -4,7 +4,7 @@ To practice with functions and functional iterators, we were challenged with bui
 
 ## Built With
 
-Plain Jane HTML and CSS
+Plain Jane JavaScript
 
 
 ## Authors
